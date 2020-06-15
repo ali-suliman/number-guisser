@@ -1,0 +1,145 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.wrapper {
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.wrapper .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 20vh;
+}
+
+.wrapper .container h1 {
+  font-size: 1.8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0ch;
+  -webkit-animation: intro 4s steps(32) forwards;
+          animation: intro 4s steps(32) forwards;
+}
+
+@-webkit-keyframes intro {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 32ch;
+  }
+}
+
+@keyframes intro {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 32ch;
+  }
+}
+
+.wrapper .container .hint {
+  color: #aaa;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0ch;
+  -webkit-animation: introhint 4s steps(46) forwards;
+          animation: introhint 4s steps(46) forwards;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+@-webkit-keyframes introhint {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 46ch;
+  }
+}
+
+@keyframes introhint {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 46ch;
+  }
+}
+
+.wrapper .container input {
+  width: 40%;
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-shadow: 0 0 0 #fff;
+  color: transparent;
+  -webkit-animation: blink .8s infinite;
+          animation: blink .8s infinite;
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
+.wrapper .container input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    border-left: .4rem #fff solid;
+  }
+  50% {
+    border-left: .4rem #000 solid;
+  }
+  100% {
+    border-left: .4rem #fff solid;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-left: .4rem #fff solid;
+  }
+  50% {
+    border-left: .4rem #000 solid;
+  }
+  100% {
+    border-left: .4rem #fff solid;
+  }
+}
+
+.wrapper .container .mssg {
+  display: none;
+}
+
+.wrapper .container .shown {
+  display: block;
+}
+
+.wrapper .container #correct {
+  color: greenyellow;
+}
+
+.wrapper .container #wrong {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.wrapper {
+    background: #000;
+    color: #fff;
+    height: 100vh;
+    padding: 1rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        min-height: 20vh;
+
+        h1 {
+            font-size: 1.8rem;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0ch;
+            animation: intro 4s steps(32) forwards;
+        }
+
+        @keyframes intro {
+            0% {
+                width: 0ch;
+            }
+            100% {
+                width: 32ch;
+            }
+        }
+
+        .hint{
+            color: #aaa;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0ch;
+            animation: introhint 4s steps(46) forwards;
+            animation-delay: 4s;
+        }
+
+        @keyframes introhint {
+            0% {
+                width: 0ch;
+            }
+            100% {
+                width: 46ch;
+            }
+        }
+
+        input {
+            width: 40%;
+            font-size: 1.8rem;
+            background: transparent;
+            border: none;
+            outline: none;
+            text-shadow: 0 0 0 #fff;
+            color: transparent;
+            animation: blink .8s infinite;
+            animation-delay: 9s;
+        }
+
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+          }
+
+        @keyframes blink {
+            0% {
+                border-left: .4rem #fff solid;
+            }
+            50% {
+                border-left: .4rem #000 solid;
+            }
+            100% {
+                border-left: .4rem #fff solid;
+            }
+        }
+
+        .mssg {
+            display: none;
+        }
+
+        .shown {
+            display: block;
+        }
+
+        #correct {
+            color: greenyellow;
+        }
+        
+        #wrong {
+            color: red;
+        }
+    }
+
+}
